@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using AeroSceneryHub.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 namespace AeroSceneryHub
 {
@@ -34,9 +35,15 @@ namespace AeroSceneryHub
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+            //options.UseSqlServer(
+            //    Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<ApplicationDbContext>(
+                options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection"), mysqlOptions =>
+                {
+                    mysqlOptions.ServerVersion(new Version(5, 7), ServerType.MySql); // replace with your Server Version and Type
+                }));
+
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
