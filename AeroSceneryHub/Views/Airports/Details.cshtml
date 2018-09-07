@@ -1,0 +1,22 @@
+﻿@model AeroSceneryHub.ViewModels.Airports.AirportDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="airport-details">
+    <h1>@Model.Code - @Model.Name</h1>
+
+    <div class="map" id="map"></div>
+
+    <div>
+        Code: @Model.Code
+    </div>
+</div>
+
+
+@section Scripts {
+<script>
+    var airportDetails = new AirportDetails();
+</script>
+}
