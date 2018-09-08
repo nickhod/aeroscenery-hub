@@ -1,0 +1,44 @@
+﻿// Configure bundling and minification for the project.
+// More info at https://go.microsoft.com/fwlink/?LinkId=808241
+[
+  {
+    "outputFileName": "wwwroot/lib/lib.min.js",
+    "inputFiles": [
+      "node_modules/navigo/lib/navigo.min.js"
+      // Non npm libraries
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": false
+    },
+    "sourceMap": false
+  }
+]
+
+
+  
+  //  "outputFileName": "Content/css/lib.min.css",
+  //  "inputFiles": [
+  //    "Content/css/font-awesome.css",
+  //    "Content/css/icomoon.css",
+  //    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  //    "node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css",
+  //    "node_modules/bootstrap-select/dist/css/bootstrap-select.min.css",
+  //    "node_modules/bootstrap-multiselect/dist/css/bootstrap-multiselect.css",
+  //    "node_modules/bootstrap-toggle/css/bootstrap-toggle.min.css",
+  //    "node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css",
+  //    "node_modules/gridstack/dist/gridstack.min.css",
+  //    "Content/css/bootstrap-colorpicker-plus/css/bootstrap-colorpicker.css",
+  //    "Content/css/bootstrap-colorpicker-plus/css/bootstrap-colorpicker-plus.css",
+  //    "Content/reportviewer/styles/kendo.common.min.css",
+  //    "Content/reportviewer/styles/kendo.blueopal.min.css",
+  //    "Content/reportviewer/styles/telerikReportViewer.css",
+  //    "Content/css/leaflet/leaflet.css",
+  //    "Content/css/leaflet/markercluster.css",
+  //    "Content/css/leaflet/markercluster.default.css"
+  //  ],
+  //  "minify": {
+  //    "enabled": true,
+  //    "renameLocals": false
+  //  },
+  //  "sourceMap": false

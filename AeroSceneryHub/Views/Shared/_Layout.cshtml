@@ -18,7 +18,7 @@
 <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">AeroScenery Hub</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,21 +26,16 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Airports <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Cultivation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Admin</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -93,9 +88,11 @@
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
-        @*<script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>*@
-        @*@<script src="~/js/site.js" asp-append-version="true"></script>*@
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src="~/lib/lib.min.js"></script>
     </environment>
+
     <environment exclude="Development">
         <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
                 asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
@@ -103,14 +100,14 @@
                 crossorigin="anonymous"
                 integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
         </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src="~/lib/lib.min.js"></script>
     </environment>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg4BVJ1ZWC6PpEfnw645qaf6SYsOvmSXI&callback=mapsLoaded"></script>
-
-    <script src="~/scripts/airportdetails.js" asp-append-version="true"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANDD-McqPfYInFk6t4vmovW2ggCS5dUr4&callback=mapsApiLoaded"></script>
+    <script src="~/scripts/aeroscenery-hub.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
 </body>

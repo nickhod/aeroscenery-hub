@@ -4,7 +4,8 @@
 
     }
 
-    public mapsLoaded() {
+    public showMap() {
+        console.log("showmap");
         // The location of Uluru
         var uluru = { lat: -25.344, lng: 131.036 };
         // The map, centered at Uluru

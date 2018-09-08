@@ -9,14 +9,37 @@
 
     <div class="map" id="map"></div>
 
-    <div>
-        Code: @Model.Code
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        Code
+                    </div>
+                    <div class="col-sm-6">
+                        @Model.Code
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-sm-6">
+
+            </div>
+        </div>
+
     </div>
+
 </div>
 
 
 @section Scripts {
 <script>
-    var airportDetails = new AirportDetails();
+
+    function mapsApiLoaded() {
+        aerosceneryHub.airportDetails.showMap();
+    }
 </script>
 }

@@ -3,7 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var AirportDetails = /** @class */ (function () {
     function AirportDetails() {
     }
-    AirportDetails.prototype.mapsLoaded = function () {
+    AirportDetails.prototype.showMap = function () {
+        console.log("showmap");
         // The location of Uluru
         var uluru = { lat: -25.344, lng: 131.036 };
         // The map, centered at Uluru
