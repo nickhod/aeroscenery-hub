@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Migrations\20180910211400_BasicModels.cs" />
+    <Compile Remove="Data\Migrations\20180910211400_BasicModels.Designer.cs" />
+    <Compile Remove="Data\Migrations\20180910212726_BasicModels.cs" />
+    <Compile Remove="Data\Migrations\20180910212726_BasicModels.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="compilerconfig.json" />
     <Content Remove="wwwroot\scripts\airportdetails.ts" />
     <Content Remove="wwwroot\scripts\airports.ts" />

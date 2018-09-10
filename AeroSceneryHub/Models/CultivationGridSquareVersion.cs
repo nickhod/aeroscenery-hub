@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace AeroSceneryHub.Models
 {
@@ -16,7 +17,7 @@ namespace AeroSceneryHub.Models
         public long CultivationGridSquareId { get; set; }
 
         [ForeignKey("User")]
-        public long UserId { get; set; }
+        public string UserId { get; set; }
 
         public DateTime DateAdded { get; set; }
 
@@ -25,5 +26,8 @@ namespace AeroSceneryHub.Models
         //public string DownloadLink { get; set; }
 
         public bool RecommendedVersion { get; set; }
+        public virtual CultivationGridSquare CultivationGridSquare { get; set; }
+        public virtual IdentityUser User { get; set; }
+
     }
 }

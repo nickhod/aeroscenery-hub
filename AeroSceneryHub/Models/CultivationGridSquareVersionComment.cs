@@ -18,5 +18,6 @@ namespace AeroSceneryHub.Models
 
         [Column("Comment", TypeName = "text")]
         public string Comment { get; set; }
+        public virtual CultivationGridSquareVersion CultivationGridSquareVersion { get; set; }
     }
 }

@@ -18,5 +18,7 @@ namespace AeroSceneryHub.Models
 
         [Column("Comment", TypeName="text")]
         public string Comment { get; set; }
+        public virtual AirportVersion AirportVersion { get; set; }
+
     }
 }

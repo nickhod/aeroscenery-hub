@@ -3,14 +3,16 @@ using System;
 using AeroSceneryHub.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AeroSceneryHub.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180910213514_BaseModels")]
+    partial class BaseModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -26,31 +28,23 @@ namespace AeroSceneryHub.Data.Migrations
 
                     b.Property<string>("CheckedOutByUserId");
 
-                    b.Property<DateTime?>("CheckedOutOn");
+                    b.Property<DateTime>("CheckedOutOn");
 
                     b.Property<long?>("CityId");
 
-                    b.Property<string>("Code")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("Code");
 
                     b.Property<long?>("CountryId");
 
-                    b.Property<string>("FAACode")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("FAACode");
 
                     b.Property<bool>("HasPavement");
 
                     b.Property<bool>("Hidden");
 
-                    b.Property<string>("IATA")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("IATA");
 
-                    b.Property<string>("ICAO")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("ICAO");
 
                     b.Property<bool>("IsHelipad");
 
@@ -58,13 +52,9 @@ namespace AeroSceneryHub.Data.Migrations
 
                     b.Property<double>("Longitude");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("Name");
 
-                    b.Property<string>("RegionCode")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("RegionCode");
 
                     b.Property<long?>("RegionId");
 
@@ -146,9 +136,7 @@ namespace AeroSceneryHub.Data.Migrations
                     b.Property<long>("CityId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("Name");
 
                     b.HasKey("CityId");
 
@@ -160,9 +148,7 @@ namespace AeroSceneryHub.Data.Migrations
                     b.Property<long>("CountryId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Name")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("Name");
 
                     b.HasKey("CountryId");
 
@@ -176,9 +162,7 @@ namespace AeroSceneryHub.Data.Migrations
 
                     b.Property<double>("EastLongitude");
 
-                    b.Property<string>("GridSquareName")
-                        .HasColumnType("VARCHAR(255)")
-                        .HasMaxLength(255);
+                    b.Property<string>("GridSquareName");
 
                     b.Property<double>("NorthLatitude");
 
