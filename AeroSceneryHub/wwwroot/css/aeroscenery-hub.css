@@ -1,0 +1,50 @@
+body {
+  padding-top: 5rem; }
+
+body.full-page-map,
+html.full-page-map {
+  height: 100%;
+  width: 100%; }
+
+body.full-page-map {
+  padding-top: 3.5rem; }
+  body.full-page-map .container-fluid {
+    height: 100%; }
+
+.starter-template {
+  padding: 2rem 1.5rem; }
+
+
+.airports {
+  position: relative;
+  height: 100%; }
+  .airports .row {
+    height: 100%; }
+    .airports .row .col-sm-12 {
+      height: 100%; }
+  .airports .map-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
+
+.airport-details .map {
+  height: 400px;
+  width: 100%; }
+
+
+.cultivation-grid-squares {
+  position: relative;
+  height: 100%; }
+  .cultivation-grid-squares .row {
+    height: 100%; }
+    .cultivation-grid-squares .row .col-sm-12 {
+      height: 100%; }
+  .cultivation-grid-squares .map-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }

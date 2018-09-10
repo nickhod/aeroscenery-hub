@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="compilerconfig.json" />
     <Content Remove="wwwroot\scripts\airportdetails.ts" />
+    <Content Remove="wwwroot\scripts\airports.ts" />
+    <Content Remove="wwwroot\scripts\cultivationgridsquaredetails.ts" />
+    <Content Remove="wwwroot\scripts\cultivationgridsquares.ts" />
     <Content Remove="wwwroot\scripts\main.ts" />
   </ItemGroup>
 
@@ -18,13 +22,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\CultivationGridSquares\" />
     <Folder Include="Views\AirportVersionComments\" />
-    <Folder Include="wwwroot\scss\" />
+    <Folder Include="wwwroot\lib\google-maps-gridlines\" />
+    <Folder Include="wwwroot\lib\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="wwwroot\scripts\airportdetails.ts" />
+    <TypeScriptCompile Include="wwwroot\scripts\airports.ts" />
+    <TypeScriptCompile Include="wwwroot\scripts\cultivationgridsquaredetails.ts" />
+    <TypeScriptCompile Include="wwwroot\scripts\cultivationgridsquares.ts" />
     <TypeScriptCompile Include="wwwroot\scripts\main.ts" />
   </ItemGroup>
 

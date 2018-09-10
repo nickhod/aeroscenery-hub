@@ -1,13 +1,18 @@
 ﻿import { AirportDetails } from "./airportdetails";
+import { CultivationGridSquares } from "./cultivationgridsquares";
+import { CultivationGridSquareDetails } from "./cultivationgridsquaredetails";
+import { Airports } from "./airports";
 
 declare var Navigo: any;
 
 export class Main {
 
     public airportDetails: AirportDetails;
+    public airports: Airports;
+    public cultivationGridSquareDetails: CultivationGridSquareDetails;
+    public cultivationGridSquares: CultivationGridSquares;
 
     constructor() {
-
 
         var root = null;
         var useHash = false; // Defaults to: false
@@ -23,11 +28,14 @@ export class Main {
                 'airports/*': () => {
                     this.airportDetails = new AirportDetails();
                 },
-                'airports': () => {
-                    //this.airportDetails = new AirportDetails();
+                'cultivation/*': () => {
+                    this.cultivationGridSquareDetails = new CultivationGridSquareDetails();
+                },
+                'cultivation': () => {
+                    this.cultivationGridSquares = new CultivationGridSquares();
                 },
                 '*': () => {
-                    //let dashboards = new Dashboards();
+                    this.airports = new Airports;
 
                 }
             })

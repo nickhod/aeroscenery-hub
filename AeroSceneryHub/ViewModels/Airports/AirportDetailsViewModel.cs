@@ -7,6 +7,11 @@ namespace AeroSceneryHub.ViewModels.Airports
 {
     public class AirportDetailsViewModel
     {
+        public AirportDetailsViewModel()
+        {
+            this.AirportVersions = new List<AirportVersionViewModel>();
+        }
+
         public long AirportId { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
@@ -27,6 +32,6 @@ namespace AeroSceneryHub.ViewModels.Airports
         public string CheckedOutByUserName { get; set; }
         public DateTime CheckedOutOn { get; set; }
         public string CheckOutComment { get; set; }
-        public IList<AirportVersionViewModel> AirportVersion { get; set; }
+        public IList<AirportVersionViewModel> AirportVersions { get; set; }
     }
 }

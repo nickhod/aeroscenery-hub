@@ -8,29 +8,52 @@
     <h1>@Model.Code - @Model.Name</h1>
 
     <div class="map" id="map"></div>
+    <div class="row">
+        <div class="col-sm-6">
 
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        Code
-                    </div>
-                    <div class="col-sm-6">
-                        @Model.Code
-                    </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    Code
                 </div>
-
-
+                <div class="col-sm-6">
+                    @Model.Code
+                </div>
             </div>
-            <div class="col-sm-6">
 
+
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+    </div>
+
+
+    <h2>Versions</h2>
+
+    @foreach (var version in Model.AirportVersions)
+    {
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="airport-version">
+
+                </div>
+                <div>@version.AirportVersionId</div>
+                <div>@version.DateAdded</div>
+                <div>@version.DownloadLink</div>
+                <div>@version.Is3D = true</div>
+                <div>@version.ModerationStatus </div>
+                <div>@version.RecommendedVersion</div>
+                <div>@version.ReleaseNotes</div>
+                <div>@version.UserName</div>
+                <div>@version.UserId</div>
             </div>
         </div>
+    }
 
-    </div>
+
+
+    <h2>Cultivation Grid Squares</h2>
 
 </div>
 
@@ -39,7 +62,7 @@
 <script>
 
     function mapsApiLoaded() {
-        aerosceneryHub.airportDetails.showMap();
+        aerosceneryHub.airportDetails.showMap(@Model.Latitude, @Model.Longitude);
     }
 </script>
 }

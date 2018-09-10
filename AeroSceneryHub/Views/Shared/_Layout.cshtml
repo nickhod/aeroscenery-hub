@@ -1,21 +1,44 @@
 ﻿<!DOCTYPE html>
-<html>
+
+
+@{
+    var bodyClass = "";
+    var htmlClass = "";
+    if (ViewData.ContainsKey("FullPageMap") && (bool)ViewData["FullPageMap"])
+    {
+        bodyClass = "full-page-map";
+        htmlClass = "full-page-map";
+    }
+
+    var containerClass = "container";
+
+    if (ViewData.ContainsKey("FullWidth") && (bool)ViewData["FullWidth"])
+    {
+        containerClass = "container-fluid";
+    }
+}
+
+<html class="@htmlClass">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AeroSceneryHub</title>
+
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/aeroscenery-hub.css" />
     </environment>
+
     <environment exclude="Development">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/aeroscenery-hub.min.css" asp-append-version="true" />
     </environment>
+
 </head>
-<body>
+
+<body class="@bodyClass">
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">AeroScenery Hub</a>
@@ -26,13 +49,13 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Airports <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" asp-area="" asp-controller="Airports" asp-action="Index">Airports</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cultivation</a>
+                    <a class="nav-link" asp-area="" asp-controller="CultivationGridSquares" asp-action="Index">Cultivation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Admin</a>
@@ -45,13 +68,9 @@
         </div>
     </nav>
 
-    <main role="main" class="container">
 
-        <div class="starter-template">
-            @RenderBody()
-
-        </div>
-
+    <main role="main" class="@containerClass">
+        @RenderBody()
     </main>
     @*
                 <nav class="navbar navbar-inverse navbar-fixed-top">

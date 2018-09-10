@@ -8,6 +8,7 @@ namespace AeroSceneryHub.Controllers
 {
     public class CultivationGridSquaresController : Controller
     {
+        [Route("cultivation")]
         public IActionResult Index()
         {
             return View();

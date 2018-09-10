@@ -22,5 +22,8 @@ namespace AeroSceneryHub.Models
         public int ModerationStatus { get; set; }
         public string DownloadLink { get; set; }
         public bool RecommendedVersion { get; set; }
+
+        [Column("Comment", TypeName = "text")]
+        public string ReleaseNotes { get; set; }
     }
 }

@@ -4,14 +4,14 @@
 
     }
 
-    public showMap() {
-        console.log("showmap");
-        // The location of Uluru
-        var uluru = { lat: -25.344, lng: 131.036 };
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), { zoom: 4, center: uluru });
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({ position: uluru, map: map });
+    public showMap(latitude: number, longitude: number) {
+
+        let airportLocation = { lat: latitude, lng: longitude };
+
+        let map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: airportLocation,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
+        });
     }
 }

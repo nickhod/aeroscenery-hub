@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    ViewData["FullWidth"] = true;
+    ViewData["FullPageMap"] = true;
+}
+
+<div class="cultivation-grid-squares">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="map-container" class="map-container"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+    function mapsApiLoaded() {
+        aerosceneryHub.cultivationGridSquares.showMap();
+    }
+    </script>
+}

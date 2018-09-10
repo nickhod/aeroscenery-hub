@@ -1,0 +1,16 @@
+﻿body {
+  padding-top: 5rem; }
+
+body.full-page-map,
+html.full-page-map {
+  height: 100%;
+  width: 100%; }
+
+body.full-page-map {
+  padding-top: 3.5rem; }
+  body.full-page-map .container-fluid {
+    height: 100%; }
+
+.starter-template {
+  padding: 2rem 1.5rem; }
+

@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "wwwroot/scss/airportdetails.css",
+    "inputFile": "wwwroot/scss/airportdetails.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/airports.css",
+    "inputFile": "wwwroot/scss/airports.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/common.css",
+    "inputFile": "wwwroot/scss/common.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/cultivationgridsquaredetails.css",
+    "inputFile": "wwwroot/scss/cultivationgridsquaredetails.scss"
+  },
+  {
+    "outputFile": "wwwroot/scss/cultivationgridsquares.css",
+    "inputFile": "wwwroot/scss/cultivationgridsquares.scss"
+  }
+]

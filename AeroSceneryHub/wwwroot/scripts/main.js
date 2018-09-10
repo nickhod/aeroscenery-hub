@@ -1,6 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var airportdetails_1 = require("./airportdetails");
+var cultivationgridsquares_1 = require("./cultivationgridsquares");
+var cultivationgridsquaredetails_1 = require("./cultivationgridsquaredetails");
+var airports_1 = require("./airports");
 var Main = /** @class */ (function () {
     function Main() {
         var _this = this;
@@ -15,11 +18,14 @@ var Main = /** @class */ (function () {
             'airports/*': function () {
                 _this.airportDetails = new airportdetails_1.AirportDetails();
             },
-            'airports': function () {
-                //this.airportDetails = new AirportDetails();
+            'cultivation/*': function () {
+                _this.cultivationGridSquareDetails = new cultivationgridsquaredetails_1.CultivationGridSquareDetails();
+            },
+            'cultivation': function () {
+                _this.cultivationGridSquares = new cultivationgridsquares_1.CultivationGridSquares();
             },
             '*': function () {
-                //let dashboards = new Dashboards();
+                _this.airports = new airports_1.Airports;
             }
         })
             .resolve();
