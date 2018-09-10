@@ -17,9 +17,13 @@ namespace AeroSceneryHub.Models
 
         [ForeignKey("User")]
         public long UserId { get; set; }
+
         public DateTime DateAdded { get; set; }
+
         public int ModerationStatus { get; set; }
-        public string DownloadLink { get; set; }
+
+        //public string DownloadLink { get; set; }
+
         public bool RecommendedVersion { get; set; }
     }
 }

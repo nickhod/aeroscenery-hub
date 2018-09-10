@@ -11,12 +11,19 @@ namespace AeroSceneryHub.Models
     {
         [Key]
         public long AirportId { get; set; }
+
         public string Name { get; set; }
+
         public string Code { get; set; }
+
         public string ICAO { get; set; }
+
         public string IATA { get; set; }
+
         public string FAACode { get; set; }
+
         public double Latitude { get; set; }
+
         public double Longitude { get; set; }
 
         [ForeignKey("Country")]
@@ -27,17 +34,29 @@ namespace AeroSceneryHub.Models
 
         [ForeignKey("City")]
         public long? CityId { get; set; }
+
         public bool IsHelipad { get; set; }
-        public bool XPSceneryAvailable { get; set; }
-        public bool AFSSceneryAvailable { get; set; }
-        public bool XP3DSceneryAvailable { get; set; }
-        public bool AFS3DSceneryAvailable { get; set; }
-        public bool Hidden { get; set; }
+
+        public int RunwaySurfaceType { get; set; }
+
+        public bool HasPavement { get; set; }
+
+        public int RunwayCount { get; set; }
+
+        public string RegionCode { get; set; }
+
         public DateTime UpdatedOn { get; set; }
 
+        public bool Hidden { get; set; }
+
         [ForeignKey("User")]
-        public long CheckedOutByUserId { get; set; }
+        public long? CheckedOutByUserId { get; set; }
+
         public DateTime CheckedOutOn { get; set; }
+
         public string CheckOutComment { get; set; }
+
+        public bool XP3D { get; set; }
+
     }
 }

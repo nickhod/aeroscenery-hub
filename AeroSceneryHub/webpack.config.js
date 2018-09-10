@@ -1,4 +1,5 @@
-﻿"use strict";
+/// <binding ProjectOpened='Watch - Development' />
+"use strict";
 
 const path = require('path');
 

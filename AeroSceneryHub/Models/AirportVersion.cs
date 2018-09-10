@@ -17,13 +17,20 @@ namespace AeroSceneryHub.Models
 
         [ForeignKey("User")]
         public long UserId { get; set; }
+
         public DateTime DateAdded { get; set; }
+
         public bool Is3D { get; set; }
+
         public int ModerationStatus { get; set; }
-        public string DownloadLink { get; set; }
+
+        //public string DownloadLink { get; set; }
+
         public bool RecommendedVersion { get; set; }
+        public DateTime? OriginalDataUpdatedOn { get; set; }
 
         [Column("Comment", TypeName = "text")]
         public string ReleaseNotes { get; set; }
+
     }
 }
