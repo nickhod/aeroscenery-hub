@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace AeroSceneryHub.Models
 {
@@ -16,7 +17,7 @@ namespace AeroSceneryHub.Models
         public long AirportId { get; set; }
 
         [ForeignKey("User")]
-        public long UserId { get; set; }
+        public string UserId { get; set; }
 
         public DateTime DateAdded { get; set; }
 
@@ -31,6 +32,9 @@ namespace AeroSceneryHub.Models
 
         [Column("Comment", TypeName = "text")]
         public string ReleaseNotes { get; set; }
+
+        public virtual Airport Airport { get; set; }
+        public virtual IdentityUser User { get; set; }
 
     }
 }

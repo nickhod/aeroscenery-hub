@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -12,14 +13,24 @@ namespace AeroSceneryHub.Models
         [Key]
         public long AirportId { get; set; }
 
+        [Column(TypeName = "VARCHAR(255)")]
+        [StringLength(255)]
         public string Name { get; set; }
 
+        [Column(TypeName = "VARCHAR(255)")]
+        [StringLength(255)]
         public string Code { get; set; }
 
+        [Column(TypeName = "VARCHAR(255)")]
+        [StringLength(255)]
         public string ICAO { get; set; }
 
+        [Column(TypeName = "VARCHAR(255)")]
+        [StringLength(255)]
         public string IATA { get; set; }
 
+        [Column(TypeName = "VARCHAR(255)")]
+        [StringLength(255)]
         public string FAACode { get; set; }
 
         public double Latitude { get; set; }
@@ -43,20 +54,27 @@ namespace AeroSceneryHub.Models
 
         public int RunwayCount { get; set; }
 
+        [Column(TypeName = "VARCHAR(255)")]
+        [StringLength(255)]
         public string RegionCode { get; set; }
 
         public DateTime UpdatedOn { get; set; }
 
         public bool Hidden { get; set; }
 
-        [ForeignKey("User")]
-        public long? CheckedOutByUserId { get; set; }
+        [ForeignKey("CheckedOutByUser")]
+        public string CheckedOutByUserId { get; set; }
 
-        public DateTime CheckedOutOn { get; set; }
+        public DateTime? CheckedOutOn { get; set; }
 
         public string CheckOutComment { get; set; }
 
         public bool XP3D { get; set; }
+
+        public virtual City City { get; set; }
+        public virtual Country Country { get; set; }
+        public virtual Region Region { get; set; }
+        public virtual IdentityUser CheckedOutByUser { get;set; }
 
     }
 }
