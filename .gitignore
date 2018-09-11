@@ -2,3 +2,11 @@
 .vs
 /AeroSceneryHub/obj
 /AeroSceneryHub/node_modules
+/packages/CefSharp.Common.67.0.0
+/AeroSceneryHub.Desktop/bin/Debug
+/AeroSceneryHub.Desktop/bin/x64/Debug
+/AeroSceneryHub.Desktop/obj/Debug
+/AeroSceneryHub.Desktop/obj/x64/Debug
+/packages/CefSharp.Wpf.67.0.0
+/packages/cef.redist.x64.3.3396.1786
+/packages/cef.redist.x86.3.3396.1786

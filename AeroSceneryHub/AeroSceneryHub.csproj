@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>aspnet-AeroSceneryHub-B87E231A-5061-4AB7-8477-F0BE3B0A06F9</UserSecretsId>
     <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
