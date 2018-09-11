@@ -5,6 +5,7 @@
     "outputFileName": "wwwroot/lib/lib.min.js",
     "inputFiles": [
       "node_modules/navigo/lib/navigo.min.js",
+      "node_modules/jsrender/jsrender.min.js"
       // Non npm libraries
     ],
     "minify": {

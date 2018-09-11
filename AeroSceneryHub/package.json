@@ -6,6 +6,8 @@
   "dependencies": {
     "@types/googlemaps": "^3.30.12",
     "@types/jquery": "^3.3.6",
+    "@types/jsrender": "0.0.29",
+    "jsrender": "^0.9.90",
     "navigo": "^7.1.2"
   },
   "devDependencies": {},

@@ -1,0 +1,21 @@
+﻿<script id="airport-info-window-template" type="text/x-jsrender">
+    <div class="airport-info-window">
+        <h2>{{:code}} {{:name}}</h2>
+
+
+        <dl class="row">
+            <dt class="col-sm-6">Runways</dt>
+            <dd class="col-sm-6">{{:runwayCount}}</dd>
+
+            <dt class="col-sm-6">Runway Surface</dt>
+            <dd class="col-sm-6">{{:runwaySurfaceType}}</dd>
+
+            <dt class="col-sm-6">Available</dt>
+            <dd class="col-sm-6">{{if available> 0}}Yes{{else}}No{{/if}}</dd>
+        </dl>
+
+
+        <a class="btn btn-primary btn-sm btn-block" href="/airports/{{:code}}">View</a>
+    </div>
+</script>
+

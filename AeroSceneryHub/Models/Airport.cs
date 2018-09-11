@@ -48,7 +48,7 @@ namespace AeroSceneryHub.Models
 
         public bool IsHelipad { get; set; }
 
-        public int RunwaySurfaceType { get; set; }
+        public SurfaceType RunwaySurfaceType { get; set; }
 
         public bool HasPavement { get; set; }
 

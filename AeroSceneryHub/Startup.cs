@@ -13,6 +13,8 @@ using AeroSceneryHub.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+using AeroSceneryHub.Repositories;
+using AeroSceneryHub.ViewModels.Mappers;
 
 namespace AeroSceneryHub
 {
@@ -48,6 +50,9 @@ namespace AeroSceneryHub
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<IAirportRepository, AirportRepository>();
+            services.AddSingleton<AirportMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
