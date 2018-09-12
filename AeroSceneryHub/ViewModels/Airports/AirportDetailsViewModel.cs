@@ -28,6 +28,8 @@ namespace AeroSceneryHub.ViewModels.Airports
         public string CheckedOutByUserName { get; set; }
         public DateTime CheckedOutOn { get; set; }
         public string CheckOutComment { get; set; }
+        public int RunwayCount { get; set; }
+        public string RunwaySurfaceType { get; set; }
         public IList<AirportVersionViewModel> AirportVersions { get; set; }
     }
 }

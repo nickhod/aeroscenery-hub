@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AeroSceneryHub.Common;
+
 
 namespace AeroSceneryHub.ViewModels.Mappers
 {
@@ -25,6 +27,8 @@ namespace AeroSceneryHub.ViewModels.Mappers
             viewModel.CheckedOutByUserName = "JoeB";
             viewModel.CheckedOutOn = DateTime.UtcNow;
             viewModel.CheckOutComment = "Checked out for some work";
+            viewModel.RunwaySurfaceType = airport.RunwaySurfaceType.GetEnumDisplayName();
+            viewModel.RunwayCount = airport.RunwayCount;
 
             return viewModel;
         }

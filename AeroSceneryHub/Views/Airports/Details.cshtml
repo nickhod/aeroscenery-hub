@@ -5,52 +5,109 @@
 }
 
 <div class="airport-details">
-    <h1>@Model.Code - @Model.Name</h1>
+    <h1 class="mb-4">@Model.Code - @Model.Name</h1>
 
-    <div class="map" id="map"></div>
+    <div class="map mb-3" id="map"></div>
+
     <div class="row">
         <div class="col-sm-6">
 
-            <div class="row">
-                <div class="col-sm-6">
-                    Code
-                </div>
-                <div class="col-sm-6">
-                    @Model.Code
-                </div>
-            </div>
+            <dl class="row">
+                <dt class="col-sm-4">Updated On</dt>
+                <dd class="col-sm-8">@Model.UpdatedOn</dd>
 
+                <dt class="col-sm-4">Runways</dt>
+                <dd class="col-sm-8">@Model.RunwayCount</dd>
+
+                <dt class="col-sm-4">Runway Surface</dt>
+                <dd class="col-sm-8">@Model.RunwaySurfaceType</dd>
+
+
+                <dt class="col-sm-4">ICAO</dt>
+                <dd class="col-sm-8">
+                    @if (string.IsNullOrEmpty(Model.ICAO))
+                    {@Model.Code}
+                else
+                { @Model.ICAO}
+                </dd>
+
+
+
+            </dl>
 
         </div>
         <div class="col-sm-6">
+            <dl class="row">
+                <dt class="col-sm-4">IATA</dt>
+                <dd class="col-sm-8">
+                    @if (string.IsNullOrEmpty(Model.IATA))
+                    {@:&ndash;
+                    }
+                    else
+                    { @Model.ICAO}
+                </dd>
 
+                <dt class="col-sm-4">FAA</dt>
+                <dd class="col-sm-8">
+                    @if (string.IsNullOrEmpty(Model.FAACode))
+                    {@:&ndash;
+                    }
+                    else
+                    { @Model.FAACode}
+                </dd>
+                <dt class="col-sm-4">Country &amp; Region</dt>
+                <dd class="col-sm-8">&ndash;</dd>
+
+                <dt class="col-sm-4">City</dt>
+                <dd class="col-sm-8">&ndash;</dd>
+
+            </dl>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-sm-12">
+            <a class="btn btn-primary" href="#">Download Latest Version</a>
         </div>
     </div>
 
 
-    <h2>Versions</h2>
+    <h2 class="mb-3">Versions</h2>
 
-    @foreach (var version in Model.AirportVersions)
-    {
-        <div class="row">
+    <div class="airport-versions mb-4">
 
-            <div class="col-sm-12">
-                <div class="airport-version">
+
+        @foreach (var version in Model.AirportVersions)
+        {
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="airport-version pb-4 mb-4">
+
+                        <div class="mb-2">
+                            <strong>Version 1</strong> uploaded on <strong>@version.DateAdded</strong> by <strong><a href="#">@version.UserName</a></strong>
+                        </div>
+                            
+                        <dl class="row mb-1">
+                            <dt class="col-sm-2">2D or 3D</dt>
+                            <dd class="col-sm-10">3D</dd>
+                        </dl>
+
+
+                        <dl>
+                            <dt>Release Notes</dt>
+                            <dd>@version.ReleaseNotes</dd>
+                        </dl>
+
+                        <a class="btn btn-sm btn-secondary" href="#">Download</a>
+                    </div>
 
                 </div>
-                <div>@version.AirportVersionId</div>
-                <div>@version.DateAdded</div>
-                <div>@version.DownloadLink</div>
-                <div>@version.Is3D = true</div>
-                <div>@version.ModerationStatus </div>
-                <div>@version.RecommendedVersion</div>
-                <div>@version.ReleaseNotes</div>
-                <div>@version.UserName</div>
-                <div>@version.UserId</div>
             </div>
-        </div>
-    }
+        }
 
+
+    </div>
 
 
     <h2>Cultivation Grid Squares</h2>

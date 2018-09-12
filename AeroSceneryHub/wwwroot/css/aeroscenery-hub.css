@@ -52,6 +52,9 @@ body.full-page-map {
   height: 400px;
   width: 100%; }
 
+.airport-details .airport-version {
+  border-bottom: solid 1px #dcdcdc; }
+
 
 .cultivation-grid-squares {
   position: relative;
